@@ -37,9 +37,12 @@ app.post("/send-email", async (req, res) => {
     }
 });
 
-app.get('/', (req, res) => {
-    res.json({message: 'Working correctly'});
-})
+app.get("/", (req, res) => {
+    return res.json({
+      success: true,
+      message: "Your server is up and running....",
+    });
+  });
 
 app.listen(5000, () => {
     console.log("http://localhost:5000");
